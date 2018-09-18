@@ -1,0 +1,49 @@
+$font-stack: arial;
+$primary-font-color: green;
+
+//index main page
+.grid-column-body {
+  display: grid;
+  grid-template: 10vh 50vh repeat(10, auto) / repeat(2, 1fr);
+  // gap: 1rem;
+}
+
+.logo {
+
+}
+.header {
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 1;
+  font: 100% $font-stack;
+  color: $primary-font-color;
+  background-color: wheat;
+  display: flex;
+}
+.main-image {
+  display: grid;
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+  overflow: hidden;
+  //height: 60%;
+  //content:
+}
+.directions {
+  grid-column: 1 / span 2;
+}
+.kite-fest-img {
+  grid-column: 1 /span 1;
+  grid-row: 4 / span 1;
+}
+.kite-fest-text {
+  grid-column: 2 / span 1;
+  grid-row: 4 / span 1;
+}
+
+
+
+
+
+//contact page
+.contact {
+  font-family: comic sans MS;
+}
