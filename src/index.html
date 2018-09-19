@@ -4,7 +4,7 @@
   <body>
     <div class="content">
       <div class="grid-column-body">
-        <div class="header">
+        <div class="header head-space">
           <div class="logo">
             <h1>Sandy Beach</h1>
           </div>
@@ -12,18 +12,37 @@
             <h2>Menu</h2>
           </div>
         </div>
-          <div class="main-image">
-            <img src="assets/images/colorful-beach-rock.jpg" alt="beach">
+          <div class="main-image-grid-div">
+            <picture class="main-image-container cover-img">
+                <source media='(max-width: 600px)' srcset='assets/images/colorful-beach-rock-500.jpg'>
+                <source media='(max-width: 1850px)' srcset='assets/images/colorful-beach-rock-1000.jpg'>  <source class="beach-main" media='(min-width: 1900px)' srcset='assets/images/colorful-beach-rock.jpg'>
+                  <img
+                    src='assets/images/colorful-beach-rock.jpg' alt="beach">
+            </picture>
           </div>
-          <div class="directions">
+          <div class="directions directions-area">
             <h3>Get Directions</h3>
           </div>
-          <div class="kite-fest-img">
+          <div class="kite-fest-img kite-img">
             <img src="assets/images/kite-fest-1.jpg" alt="beach">
           </div>
-          <div class="kite-fest-text">
+          <div class="kite-fest-text kite-text">
             <h4>Kite Festival Oct 8</h4>
-            <p>Yay! A kite festival!</p>
+            <p>Yay! A kite festival! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          </div>
+          <div class="local-eats-img eats-img">
+            <img src="assets/images/beach-wine-dinner.jpg" alt="beach wine dinner">
+          </div>
+          <div class="local-eats-text eats-text">
+            <h4>Food and Wine</h4>
+            <p>Fresh seafood and local wine. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          </div>
+          <div class="accomodations-info-img accomodations-img">
+            <img src="assets/images/beach-resort.jpg" alt="resort">
+          </div>
+          <div class="accomodations-info-text accomodations-text">
+            <h4>Accomodations</h4>
+            <p>Hotels, resorts, and B&Bs Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
           </div>
       </div>
     </div>

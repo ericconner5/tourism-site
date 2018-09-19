@@ -39,11 +39,17 @@ module.exports = {
       },
 
       {
-        test:/\.html$/,
-        use: [
-          'html-loader'
-        ]
-      },
+            test: /\.html$/,
+            loader: 'html-srcsets-loader',
+            options: {
+                attrs: ['img:src', ':srcset'],
+                minimize: true,
+                caseSensitive: true,
+                removeAttributeQuotes:false,
+                minifyJS:false,
+                minifyCSS:false
+            },
+        }
 
 
     ]
@@ -58,7 +64,7 @@ module.exports = {
 
     new HtmlWebpackPlugin({
       template: './src/contact.html',
-    filename: 'contact.html'
+      filename: 'contact.html'
     })
   ]
 

@@ -1,49 +1,160 @@
 $font-stack: arial;
 $primary-font-color: green;
 
+//mixins
+@mixin text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2em;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+
 //index main page
-.grid-column-body {
+// @media only screen and (max-width: 599px)  {
+  .grid-column-body {
   display: grid;
-  grid-template: 10vh 50vh repeat(10, auto) / repeat(2, 1fr);
-  // gap: 1rem;
+  grid-template-areas:
+  "head-space"
+  "cover-img"
+  "directions-area"
+  "kite-img"
+  "kite-text"
+  "eats-img"
+  "eats-text"
+  "accomodations-img"
+  "accomodations-text";
+  // }
+}
+@media only screen and (min-width: 600px)  {
+  .grid-column-body {
+    display: grid;
+    grid-template: 10vh 50vh repeat(10, auto) / repeat(2, 1fr);
+    // gap: 1rem;
+    grid-template-areas:
+    "head-space head-space"
+    "cover-img cover-img"
+    "directions-area directions-area"
+    "kite-img kite-text"
+    "eats-text eats-img"
+    "accomodations-img accomodations-text";
+  }
 }
 
 .logo {
 
 }
 .header {
-  grid-column: 1 / span 3;
-  grid-row: 1 / span 1;
+  // grid-column: 1 / span 3;
+  // grid-row: 1 / span 1;
   font: 100% $font-stack;
   color: $primary-font-color;
   background-color: wheat;
   display: flex;
 }
-.main-image {
+.head-space {
+  grid-area: head-space;
+}
+.main-image-grid-div {
   display: grid;
   grid-column: 1 / span 2;
   grid-row: 2 / span 1;
   overflow: hidden;
-  //height: 60%;
+
+  // height: 650px;
+  // min-height: 100%;
   //content:
+}
+
+.main-image-container {
+  // height: 650px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
+}
+.cover-img {
+  grid-area: cover-img;
+}
+.beach-main {
+  flex-shrink: 0;
+  width: 100%;
 }
 .directions {
   grid-column: 1 / span 2;
+  display: flex;
+  justify-content: center;
+    h3 {
+    font-size: 2em;
+  }
+}
+.directions-area {
+  grid-area: directions-area;
 }
 .kite-fest-img {
   grid-column: 1 /span 1;
   grid-row: 4 / span 1;
+  max-width: 30%;
+}
+.kite-img {
+  grid-area: kite-img;
 }
 .kite-fest-text {
   grid-column: 2 / span 1;
   grid-row: 4 / span 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 2em;
+  padding-left: 6rem;
+  padding-right: 6rem;
+  p {
+    font-size: 1.5rem;
+  }
 }
-
-
-
-
+.kite-text {
+  grid-area: kite-text;
+}
+.local-eats-img {
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+}
+.eats-img {
+  grid-area: eats-img;
+}
+.local-eats-text {
+  grid-column: 1 / span 1;
+  grid-row: 5 / span 1;
+  @include text-box;
+}
+.eats-text {
+  grid-area: eats-text;
+}
+.accomodations-info-img {
+  grid-column: 1 / span 1;
+  grid-row: 6 / span 1;
+}
+.accomodations-img {
+  grid-area: accomodations-img;
+}
+.accomodations-info-text {
+  grid-column: 2 / span 1;
+  grid-row: 6 / span 1;
+  @include text-box;
+}
+.accomodations-text {
+  grid-area: accomodations-text;
+}
 
 //contact page
 .contact {
   font-family: comic sans MS;
 }
+
+//Media Queries
