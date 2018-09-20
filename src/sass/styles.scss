@@ -13,27 +13,30 @@ $primary-font-color: green;
     font-size: 1.5rem;
   }
 }
+// .content-wrapper {
+//   display: flex;
+//   flex-direction: column;
+// }
 
 
 //index main page
 // @media only screen and (max-width: 599px)  {
   .grid-column-body {
   display: grid;
+  grid-template-columns: auto;
+  repeat{auto-fit: minmax (1fr, 1fr)}
   grid-template-areas:
   "head-space"
   "cover-img"
   "directions-area"
   "kite-img"
-  "kite-text"
-  "eats-img"
   "eats-text"
-  "accomodations-img"
-  "accomodations-text";
-  // }
+  "accomodations-img";
 }
 @media only screen and (min-width: 600px)  {
   .grid-column-body {
     display: grid;
+    grid-template-columns: auto;
     grid-template: 10vh 50vh repeat(10, auto) / repeat(2, 1fr);
     // gap: 1rem;
     grid-template-areas:
@@ -47,24 +50,32 @@ $primary-font-color: green;
 }
 
 .logo {
+  grid-column: 1 / span 1;
 
 }
+.menu {
+  grid-column: 2 / span 1;
+  grid-column-end: 2;
+}
 .header {
-  // grid-column: 1 / span 3;
-  // grid-row: 1 / span 1;
+  display: grid;
+  grid-column: 1 / span 3;
+  grid-row: 1 / span 1;
   font: 100% $font-stack;
   color: $primary-font-color;
   background-color: wheat;
-  display: flex;
 }
 .head-space {
   grid-area: head-space;
 }
 .main-image-grid-div {
-  display: grid;
   grid-column: 1 / span 2;
   grid-row: 2 / span 1;
-  overflow: hidden;
+  display: grid;
+
+  // overflow-x: none;
+  // object-fit: fill;
+  // max-width: 100%;
 
   // height: 650px;
   // min-height: 100%;
@@ -73,11 +84,11 @@ $primary-font-color: green;
 
 .main-image-container {
   // height: 650px;
-  display: flex;
+  // display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-  width: 100%;
-  overflow: hidden;
+  align-items: stretch;
+  // overflow: hidden;
 }
 .cover-img {
   grid-area: cover-img;
@@ -97,10 +108,18 @@ $primary-font-color: green;
 .directions-area {
   grid-area: directions-area;
 }
-.kite-fest-img {
+.kite-img {
+  // top: 50%;
+  // left: 50%;
+  // transform: translate(-50%, -50%);
+  // max-width: 100%;
+  // height: auto;
   grid-column: 1 /span 1;
   grid-row: 4 / span 1;
-  max-width: 30%;
+}
+.kite-fest-img {
+
+
 }
 .kite-img {
   grid-area: kite-img;
